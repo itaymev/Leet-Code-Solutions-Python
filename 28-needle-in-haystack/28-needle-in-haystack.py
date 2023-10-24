@@ -14,10 +14,10 @@ solution = Solution()
 
 needle = "sad"
 haystack = "sadbutsad" 
-Solution.removeElement(solution, haystack, needle)
-print(haystack) ## 0
+answer1 = Solution.removeElement(solution, haystack, needle)
+print(answer1) ## 0
 
 needle = "leeto"
 haystack = "leetcode"
-Solution.removeElement(solution, haystack, needle)
-print(haystack) ## -1
+answer2 = Solution.removeElement(solution, haystack, needle)
+print(answer2) ## -1
