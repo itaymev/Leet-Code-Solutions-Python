@@ -1,0 +1,25 @@
+class Solution(object):
+    def reverse(self, x: int) -> int:
+        sign = 1
+        if x < 0:
+            sign = -1
+
+        revx = str(abs(x))[::-1]
+        revx = int(revx[0:len(revx)])*sign
+
+        # constraint: if x is <= -2^31 or x is >= 2^31 - 1 then we return 0
+        if revx >= 2**31 - 1 or revx <= -2**31:
+            return 0
+        
+        return revx
+
+solution = Solution()
+
+answer1 = Solution.reverse(solution, -321)
+print(answer1) # should print -123
+
+answer2 = Solution.reverse(solution, -234567890123)
+print(answer2) # should print 0 since -321098765432 is lesser than (-2)^31
+
+answer3 = Solution.reverse(solution, 12345)
+print(answer3) # should print 54321
